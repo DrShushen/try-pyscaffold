@@ -5,6 +5,7 @@
 *.cfg
 !.isort.cfg
 !setup.cfg
+!pyscaffold.cfg
 *.orig
 *.log
 *.pot
