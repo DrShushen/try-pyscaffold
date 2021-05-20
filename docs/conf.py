@@ -301,3 +301,8 @@ intersphinx_mapping = {
     "scipy": ("https://docs.scipy.org/doc/scipy/reference", None),
     "pyscaffold": ("https://pyscaffold.org/en/stable", None),
 }
+
+# -- Doctest config ----------------------------------------------------------
+doctest_global_setup = """
+import try_pyscaffold
+"""

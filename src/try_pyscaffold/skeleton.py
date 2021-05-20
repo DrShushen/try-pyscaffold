@@ -48,6 +48,13 @@ def fib(n):
 
     Returns:
       int: n-th Fibonacci number
+    
+    Examples:
+        To get the 7th Fibonacci number:
+
+        >>> print(try_pyscaffold.skeleton.fib(7))
+        13
+
     """
     assert n > 0
     a, b = 1, 1
