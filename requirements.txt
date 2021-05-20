@@ -1,11 +1,14 @@
 # Requirements for development.
 build==0.3.1.post1
-tox==3.23.1  # Will 
-# tox-conda==0.8.0  # Optional, for developing using conda environments.
+myst-parser[linkify]==0.14.0
 pyscaffold==4.0.1  # Installs setuptools-scm etc.
-pyscaffoldext-markdown==0.4.1  # Installs sphinx
+pyscaffoldext-markdown==0.4.1
 pyscaffoldext-travis==0.3
 pre-commit==2.12.1
 pytest==6.2.4
 pytest-cov==2.12.0
+sphinx==3.5.4  # <4 due to awaiting on this: https://github.com/executablebooks/MyST-Parser/issues/378
+sphinx-rtd-theme==0.5.2
+tox==3.23.1
+# tox-conda==0.8.0  # Optional, for developing using conda environments.
 twine==3.4.1
