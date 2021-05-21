@@ -23,7 +23,7 @@ __location__ = os.path.join(
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.join(__location__, "../src"))
 
-# TODO: Confirm this can be removed: https://github.com/readthedocs/readthedocs.org/issues/1139#issuecomment-391823007
+# NOTE: This cannot be removed, the issue still persists on RTD.
 # -- Run sphinx-apidoc -------------------------------------------------------
 # This hack is necessary since RTD does not issue `sphinx-apidoc` before running
 # `sphinx-build -b html . _build/html`. See Issue:
