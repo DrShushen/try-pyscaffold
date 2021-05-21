@@ -1,4 +1,6 @@
 # Requirements for development.
+black==21.5b1
+flake8==3.9.2
 build==0.3.1.post1
 myst-parser[linkify]==0.14.0
 pyscaffold==4.0.1  # Installs setuptools-scm etc.
