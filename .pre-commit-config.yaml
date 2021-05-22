@@ -1,16 +1,17 @@
 exclude: '^docs/conf.py'
+# ^ May be useful in some cases when individual hook's exclusion options don't work here.
 
 repos:
 - repo: git://github.com/pre-commit/pre-commit-hooks
   rev: v3.4.0
   hooks:
   - id: trailing-whitespace
+    args: ['--markdown-linebreak-ext=md']
   - id: check-added-large-files
   - id: check-ast
   - id: check-json
-  - id: check-merge-conflict
-  - id: check-xml
   - id: check-yaml
+  - id: check-merge-conflict
   - id: debug-statements
   - id: end-of-file-fixer
   - id: requirements-txt-fixer
@@ -29,15 +30,18 @@ repos:
 #     ]
 
 - repo: https://github.com/pycqa/isort
-  rev: 5.7.0
+  rev: 5.8.0
   hooks:
   - id: isort
 
 - repo: https://github.com/psf/black
-  rev: 20.8b1
+  rev: 21.5b1
   hooks:
   - id: black
     language_version: python3
+    args: [
+      "--force-exclude=docs/conf.py"
+    ]
 
 ## If like to embrace black styles even in the docs:
 # - repo: https://github.com/asottile/blacken-docs
@@ -47,7 +51,7 @@ repos:
 #     additional_dependencies: [black]
 
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.4
+  rev: 3.9.2
   hooks:
   - id: flake8
   ## You can add flake8 plugins via `additional_dependencies`:
