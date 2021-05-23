@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Unit Results ${{ matrix.os }}-python${{ matrix.python-version }}
-        path: ./test-results/report.xml
+        path: .test-results/report.xml
 
   publish-test-results:
     name: Publish Tests Results
