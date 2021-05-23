@@ -51,7 +51,11 @@ jobs:
         with:
           path: artifacts
 
-      - name: Publish Unit Test Results
+      - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         with:
           files: artifacts/**/*.xml
+          check_name: "Test Results"
+          report_individual_runs: true
+          check_run_annotations: all tests,skipped tests
+          test_changes_limit: 0
